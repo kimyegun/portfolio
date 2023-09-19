@@ -24,13 +24,13 @@ function About() {
        </TypeItDiv>
        <br/><br/>
         <P>안녕하세요, 저는 열정적인 자바스크립트 개발자입니다.</P>
-        <P>제가 프로그래밍에 처음 빠져든 것은 자바스크립트의 동적이고 유연한 특성에 매료되었기 때문입니다.</P>
-        <P>그래서 저는 기술 스택과 프로그래밍 언어를 배우고 익히는 동시에, 그것들이 어떻게 실제 세상의 문제를 해결할 수 있는지, 어떻게 사용자 경험을 향상시킬 수 있는지 항상 고민하려 노력합니다.</P>
-        <P>이 언어를 사용하면서 저는 문제 해결의 즐거움을 발견했습니다.</P>
+        <P>저는 새로운 것을 배우는 것에 대한 열정과 함께 다재다능한 자바스크립트 언어에 매력을 느꼈습니다.</P>
+        <P>저의 목표는 기술적 역량과 창조성을 결합하여 사람들이 일상에서 직면하는 문제를 해결하는 소프트웨어 솔루션을 개발하는 것입니다.</P>
+        <P>이 과정에서 사용자 경험 향상과 생산성 증가를 위해 사용자 중심의 디자인 원칙이 적용됩니다.</P>
         <br/>
-        <P>그러나 시간이 지남에 따라 제 관심사는 단순히 문제를 해결하는 것에서 더 나아가, 어떻게 사람들의 삶을 향상시키고, 전체 사회에 긍정적인 변화를 가져오는지로 확장 되었습니다.</P>
-        <P>적재적소에 알맞은 기술을 적용하여 최고의 UX를 제공할 수 있는</P>
-        <P>프론트엔드 개발자가 되고 싶습니다.</P>
+        <P>기술 트렌드가 지속적으로 발전하고 변화함에 따라 저 또한 계속 학습하여 최신 프레임워크와 도구를 익혀나갈 계획입니다.</P>
+        <P>마지막으로, 협력적인 개발 문화를 추구하며 동료 개발자들과 지식 공유와 함께 성장하겠습니다.</P>
+        <P> </P>
         
      </Div>
 
@@ -42,18 +42,16 @@ function About() {
        <ProfileContainer>
           <StyledImg src={ai} alt="My Description" />
        <StyledUl>
-              <StyledLi><GoPerson/><span>김예건</span></StyledLi>
-              <StyledLi><FaBirthdayCake/><span>1999. 12. 13</span></StyledLi>
-              <StyledLi><GoHome/><span>경기도 시흥시</span></StyledLi>
-              <StyledLi><GoMail/><span>kimyegun123@gmail.com</span></StyledLi>
-              <StyledLi><GoMortarBoard/><span>유한대학교 ( 3D프린팅공학과 )</span></StyledLi>
+              <StyledLi><GoPerson/><StyledSpan>김예건</StyledSpan></StyledLi>
+              <StyledLi><GoHome/><StyledSpan>1999. 12. 13</StyledSpan></StyledLi>
+              <StyledLi><FaBirthdayCake/><StyledSpan>경기도 시흥시</StyledSpan></StyledLi>
+              <StyledLi><GoMail/><StyledSpan>kimyegun123@gmail.com</StyledSpan></StyledLi>
+              <StyledLi><GoMortarBoard/><StyledSpan>유한대학교 ( 3D프린팅공학과 )</StyledSpan></StyledLi>
             <br/>
-              <StyledLi>
-                <a href="https://github.com/kimyegun"><GoMarkGithub/><span>Git</span></a>
-              </StyledLi>
-              <StyledLi><a href="https://velog.io/@savinpark"><SiBloglovin/><span>BLOG</span></a></StyledLi>
-            </StyledUl>
-            </ProfileContainer>
+            <StyledLi><StyledLink href="https://github.com/kimyegun" target="_blank" rel="noopener noreferrer"><GoMarkGithub/><StyledSpan>Git</StyledSpan></StyledLink></StyledLi>
+            <StyledLi><StyledLink href="https://velog.io/@kimyegun" target="_blank" rel="noopener noreferrer"><SiBloglovin/><StyledSpan>BLOG</StyledSpan></StyledLink></StyledLi>
+      </StyledUl>
+         </ProfileContainer>
        </Div>
      </CardContainer>
    </Section>
@@ -62,6 +60,16 @@ function About() {
 
 export default About;
 
+const StyledLink = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+`;
+
+const StyledSpan = styled.span`
+  margin-left: 10px;
+
+`;
 
 const ProfileContainer = styled.div`
   display: flex; 
@@ -78,9 +86,12 @@ const Div = styled.div`
 `;
 
 const P = styled.p`
+color: #666666;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+  font-weight:bold;
+  font-family: Arial, sans-serif;
 `;
 
 const H2 = styled.h2`
@@ -90,9 +101,11 @@ const H2 = styled.h2`
  text-align: center; 
 `;
 const TypeItDiv = styled.div`
+  color: #666666;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  font-family: Arial, sans-serif;
 `;
 
 const StyledImg = styled.img`
@@ -105,9 +118,11 @@ margin-right: 80px;
 const CardContainer = styled.div`
   width: 70%; 
   margin: auto;
-  border-radius: 15px; // 모서리를 둥글게 만듭니다.
-  overflow: hidden; // 내부 컨텐츠가 넘칠 경우 숨깁니다.
-  padding: 20px; // 내부 패딩을 적당히 주어 컨텐츠와 테두리 간에 공간을 만듭니다.
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
   
   background-color: #f8f9fa; // 배경색을 약간의 회색 계열로 변경합니다.
   

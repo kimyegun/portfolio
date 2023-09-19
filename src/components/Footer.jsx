@@ -1,62 +1,43 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const slideUp = keyframes`
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 const FooterWrapper = styled.footer`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+    display:flex ;
+    flex-direction :column ;
+    align-items:center ;
+    justify-content:center ;
 
+   
+   animation:${slideUp} ease-in-out ;  
+   animation-duration :2s ;
 `;
 
-const FooterSection = styled.div`
-    margin-bottom :15 px ;
-
-    h5{
-        font-size :1.2 em ;
-        margin-bottom :10 px ;
-    }
-
-    p, a {
-        font-size :0.9 em ;
-        color:#fff ; 
-        text-decoration:none ; 
-        margin-bottom :10 px ;
-
-         &:last-child {
-            margin-bottom :0 ;
-         }
-     }
-`;
 
 const BottomBarContainer = styled.div`
    text-align:center ;  
-   font-size :0.8 em ; 
-   padding-top :20 px ;
+   font-size :0.8em ; 
+   padding-top :20px ;
 
 `;
 
+
 const Footer = () => (
 <FooterWrapper>
-<FooterSection>
-<h5>Contact Us</h5>
-<p>1234 Street Name</p>
-<p>City, State, Postal Code</p>
-<a href="tel:+123456789">+1 (234) 567-890</a>
-<a href="mailto:info@domain.com">info@domain.com</a>
 
-{/* Social Icons */}
-{/* Add your social icons here */}
- </FooterSection>
-
- {/* Bottom Bar */}
  <BottomBarContainer className="f4-bottom-bar">
- &copy; {new Date().getFullYear()} Your Company Name | All rights reserved.
+ &copy; {new Date().getFullYear()} KimYeGun | All rights reserved.
  </BottomBarContainer>
-
 
  </FooterWrapper>
 

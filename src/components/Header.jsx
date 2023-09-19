@@ -13,13 +13,12 @@ const Header = () => {
       <GlobalStyle/>
       <div className="font-bold text-2xl" >My Website</div>
       <nav>
-        <ul className="flex space-x-4">
-          <li><a href="#home" className="hover:underline text-lg">Home</a></li>
-          <li><a href="#about" className="hover:underline text-lg">About</a></li>
-          <li><a href="#project" className="hover:underline text-lg">Projects</a></li>
-          <li><a href="#skills" className="hover:underline text-lg">Skills</a></li>
-        </ul>
-      </nav>
+  <ul className="flex justify-start space-x-12">
+    <li className='mx-5'><a href="#about" className="hover:underline text-lg">About</a></li>
+    <li className='mx-5'><a href="#project" className="hover:underline text-lg">Projects</a></li>
+    <li className='mx-5'><a href="#skills" className="hover:underline text-lg">Skills</a></li>
+  </ul>
+</nav>
     </header>
     
   );

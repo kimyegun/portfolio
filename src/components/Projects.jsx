@@ -3,6 +3,10 @@ import Card from './Card';
 import styled from 'styled-components';
 import Board from '../img/board.png';
 import Mbti from '../img/mbti.png';
+import diary from '../img/banner.png';
+import hotel from '../img/hotel.png';
+import About from '../img/About.png'
+
 
 function Projects() {
     const projects = [
@@ -14,18 +18,18 @@ function Projects() {
             end: "23.08.17",
             tech: ["Scss", "React", "react hook", "router", "axois"],
             work: ["Design", "Frontend"],
-            demo: "https://savinpark.github.io/weather--react/",
+            demo: "",
             source: "https://github.com/kimyegun/MBTI_WORLD",
         },
         {
             title: "EmotionDiary",
-            image: "EatHealthy.png",
+            image: diary,
             detail: "react 개인 포트폴리오 입니다.",
             start: "23.07.10 ",
             end: " 23.07.28",
             tech: ["React", "react hook", "router", "axois"],
             work: ["Design", "Frontend"],
-            demo: "https://savinpark.github.io/Eat-Healthy/",
+            demo: "",
             source: "https://github.com/kimyegun/React_Project/",
         },
         {
@@ -41,25 +45,25 @@ function Projects() {
         },
         {
             title: "HotelLife  ",
-            image: "Portfolio.png",
+            image: hotel,
             detail: "JAVA 팀 포트폴리오 입니다.",
             start: "23.05.22",
             end: "23.05.29",
             tech: ["azul java ver.17", "oracle database", "git hub"],
             work: ["Design", "Frontend"],
-            demo: "https://savinpark.github.io/portfolio/",
+            demo: "",
             source: "https://github.com/kimyegun/HotelLife/",
         },
         {
-            title: "HotelLife  ",
-            image: "Portfolio.png",
-            detail: "JAVA 팀 포트폴리오 입니다.",
+            title: "portfolio",
+            image: About,
+            detail: "개인 포트폴리오 입니다.",
             start: "23.05.22",
-            end: "23.05.29",
+            end: "23.09.20",
             tech: ["azul java ver.17", "oracle database", "git hub"],
             work: ["Design", "Frontend"],
-            demo: "https://savinpark.github.io/portfolio/",
-            source: "https://github.com/kimyegun/HotelLife/",
+            demo: "",
+            source: "https://github.com/kimyegun/portfolio/",
         },
     ]
     const [flipAll, setFlipAll] = useState(false);
@@ -74,13 +78,12 @@ function Projects() {
 
     return(
         <>
-            <br/><br/><br/><br/>
-            <h2 style={{fontSize: "48px", textAlign: "center"}}>PROJECTS</h2>
+            <h2 style={{fontSize: "48px", textAlign: "center", fontFamily: "Arial" }}>PROJECTS</h2>
             <div  style={{textAlign: "right"}}>
             <button  onClick={() => {setFlipAll(!flipAll)}}>
                 { !flipAll ? (<span>Flip All &gt;</span>) : (<span>Reset &gt;</span>)}
             </button>
-            <br/><br/><br/><br/><br/><br/><br/><br/>
+    
             </div>
             <ProjectsSection id="project">
             <ProjectsGrid>
