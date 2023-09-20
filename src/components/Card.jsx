@@ -13,20 +13,25 @@ const CardBack = styled.div`
 const DetailContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute space evenly between items */
-    height: 100%; /* Take full height of the parent container */
+    height: 100%;
+; 
+
 `;
 const DetailTitle = styled.h2`
     font-weight: bold;
     text-align: center;
+    padding-bottom: 10px
 `;
 
 const DetailText = styled.p`
-    font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-family: Arial;
+    font-size: 11px;
     color: #333; 
-    line-height: 1.5; 
+    line-height: 1.0; 
     padding: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+ 
 `;
 
 
@@ -81,9 +86,13 @@ const HoverMessage = styled.div`
 `;
 
 const TechTag = styled.span`
-  color:0088cc ;
-  padding: 5px;
-  margin-right: 10px;
+font-family: Arial;
+font-size: 12px;
+color: #333; 
+line-height: 0.5; 
+font-weight: bold;
+padding-top: 7px;
+padding-bottom: 7px;
 `;
 
 const TechContainer = styled.div`
@@ -125,23 +134,22 @@ function Card ({proj}) {
         <DetailContainer>
             <DetailTitle>{proj.title}</DetailTitle>
             <DetailText>{proj.detail}</DetailText>
-            {proj.start && proj.end && <DetailText>기간: {proj.start} ~ {proj.end}</DetailText>}
+            <TechTag># Peroid</TechTag>
+            {proj.start && proj.end && <DetailText> {proj.start} ~ {proj.end}</DetailText>}
             <TechContainer>
-                <TechTag>기술:</TechTag>
+                <TechTag># Tech:</TechTag>
                 {proj.tech.map((tech, index) => 
                     <React.Fragment key={index}>
-                        <TechTag>#{tech}</TechTag>{index !== proj.tech.length - 1 && ', '}
+                        <DetailText>{tech}</DetailText>{index !== proj.tech.length - 1 && ' '}
                     </React.Fragment>
                 )}
             </TechContainer>
+            <TechTag># My work</TechTag>
             {proj.work.map((work, index) => 
-                <DetailText key={index}>작업{index + 1}: {work}</DetailText>
+                <DetailText key={index}>- {work}</DetailText>
             )}
+            <SourceButton href={proj.source} target="_blank" rel="noopener noreferrer">Go to Source</SourceButton>
         </DetailContainer>
-
-        {/* Ensure the source button stays at the bottom */}
-        <SourceButton href={proj.source} target="_blank" rel="noopener noreferrer">Go to Source</SourceButton>
-
     </CardBack>
 )}
           </CardContainer>
