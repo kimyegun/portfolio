@@ -58,7 +58,7 @@ function Projects() {
             title: "portfolio",
             image: About,
             detail: "React 개인 포트폴리오입니다.",
-            start: "23.05.22",
+            start: "23.09.11",
             end: "23.09.20",
             tech: ["azul java ver.17", "oracle database", "git hub"],
             work: ["React을 활용하여 상태관리 및 컴포넌트 관리", "Styled-Component을 활용한 웹디자인", "GoogleApi을 통해 구글폰트 설정"],

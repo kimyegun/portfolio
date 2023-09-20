@@ -4,6 +4,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skill from './components/Skill';
 import styled, { keyframes } from 'styled-components';
+import {Helmet} from 'react-helmet-async';
 
 const FireworkAnimation = keyframes`
   0% { transform: scale(0); opacity: 1; }
@@ -43,7 +44,11 @@ const CenteredDiv = styled.div`
 
 const App = () => (
    <>
+     <Helmet>
+      <title>YeGun Kim</title>
+    </Helmet>
        <AppContainer>
+        
            <Header/>
            <About/>
            <Firework top="30%" left="50%" size={200} color="#FFDEE9" duration={2} />
